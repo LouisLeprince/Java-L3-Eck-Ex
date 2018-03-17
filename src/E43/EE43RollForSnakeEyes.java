@@ -14,8 +14,9 @@ public class EE43RollForSnakeEyes {
       System.out.println("It took " + numberOfRolls + " rolls to get snake eyes.");
    }  // end main()
   
+   
    /**
-    * Simulates rolling a pair of dice until a given total comes up.
+    * Simulates rolling a pair of dice until a given total comes up.	
     * Precondition:  The desired total is between 2 and 12, inclusive.
     * @param N the total that we want to get on the dice
     * @return the number of times the dice are rolled before the
