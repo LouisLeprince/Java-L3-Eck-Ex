@@ -1,4 +1,4 @@
-package question;
+package EE57;
 
 public class GeneralCultureQuestion implements IntQuestion {
 	
@@ -12,6 +12,11 @@ public class GeneralCultureQuestion implements IntQuestion {
 	
 	public String getQuestion() {
 		return question;
+	}
+	
+	public void showQuestion(){
+		System.out.print(question);
+		System.out.print(" ");
 	}
 	
 	public int getCorrectAnswer() {
