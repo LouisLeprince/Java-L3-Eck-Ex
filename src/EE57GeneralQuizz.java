@@ -63,8 +63,6 @@ public class EE57GeneralQuizz {
 	private void askQuiz() {
 		ArrayList<ArrayList<Integer>> userAnswers = new ArrayList<ArrayList<Integer>>();
 		ArrayList<ArrayList<Integer>> bonusAnswers = new ArrayList<ArrayList<Integer>>();
-		
-		System.out.println("DANS ASKQUIZZ");
         
         int questionNum;
         Scanner scn = new Scanner(System.in);
@@ -96,12 +94,12 @@ public class EE57GeneralQuizz {
 	            k += 1;
 	        }while((k < 9) & (val != 0));
 	        bonusAnswers.add(i, answer);
-	        answer.clear();
 	        System.out.println();
         }
 		
 		this.userAnswers = userAnswers;
 		this.bonusAnswers = bonusAnswers;
+		
 	}
 	
 	private void evalQuiz() {
@@ -143,7 +141,7 @@ public class EE57GeneralQuizz {
             System.out.printf("%4sCorrect answer : %s", "", bonus_question[i].getCorrectAnswer().toString()); System.out.println();
             if (isCorrect == true) {
             	userBonusScore += 1;
-            	System.out.printf("%4sYou were CORRECT.","");
+            	System.out.printf("%4sYou said %s, which is CORRECT.","",bonusAnswers.get(i).toString()); System.out.println();
             }else{
             	System.out.printf("%4sYou said %s, which is INCORRECT.","",bonusAnswers.get(i).toString()); System.out.println();
             }

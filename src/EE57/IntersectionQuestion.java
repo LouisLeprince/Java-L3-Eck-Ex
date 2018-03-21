@@ -30,11 +30,11 @@ public class IntersectionQuestion implements SetQuestion{
 			}
 		}
 		
-		Collections.sort(NoDup(r));
+		Collections.sort(r);
 		
 		this.u = u;
 		this.v = v;
-		this.r = r;
+		this.r = NoDup(r);
 		
 	}
 		
@@ -48,10 +48,6 @@ public class IntersectionQuestion implements SetQuestion{
 		
 	public List<Integer> getCorrectAnswer() {
 		return r;
-	}
-	
-	public void showCorrectAnswer() {
-		
 	}
 	
 	public boolean isCorrectAnswer(List<Integer> answer) {
